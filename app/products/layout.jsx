@@ -1,3 +1,10 @@
+
+
+
+export const metadata = {
+  title: "Products - Codeit Mall",
+};
+
 export default function ProductsLayout({ children }) {
   return (
     <>

@@ -1,5 +1,6 @@
 import ProductList from "@/components/ProductList";
 import SearchForm from "@/components/SearchForm";
+import Styles from './page.module.css';
 
 export default async function Home() {
   const response = await fetch(

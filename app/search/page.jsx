@@ -1,6 +1,20 @@
 import ProductList from "@/components/ProductList";
 import SearchForm from "@/components/SearchForm";
 
+// 기본 정적 메타데이터 생성
+// export const metadata = {
+//   title: "Search - Codeit Mall",
+// };
+
+// 동적 메타데이터 생성: searchParams 함수 이용
+export async function generateMetadata({ searchParams }) {
+  const { q } = await searchParams;
+
+  return {
+    title: `검색결과: ${q} - Codeit Mall`,
+  };
+}
+
 export default async function SearchPage({ searchParams }) {
   // 서버에서 쿼리 스트링 접근
   const { q } = await searchParams;
